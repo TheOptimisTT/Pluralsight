@@ -1,4 +1,6 @@
 from urllib.request import urlopen
+
+
 def fetch_words():
     story = urlopen('http://sixty-north.com/c/t.txt')
     story_words = []
@@ -9,3 +11,5 @@ def fetch_words():
     story.close()
     for word in story_words:
         print(word)
+if __name__ == '__main__':
+    fetch_words()
